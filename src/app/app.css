@@ -1,3 +1,7 @@
 .panel-body img {
   max-width: 100%
 }
+
+.panel-footer h3 {
+  text-align: center;
+}
