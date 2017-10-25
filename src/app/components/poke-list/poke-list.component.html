@@ -2,10 +2,10 @@
   <h2>Pokemons</h2>
 </div>
 <div class="row">
-  <div class="panel panel-default col-md-3">
+  <div class="panel panel-default col-md-2" *ngFor="let pokemon of pokemonsList">
     <div class="panel-body">
-      <img src="../../assets/bulbizare.png" alt="">
+      <img src="../../assets/{{pokemon.image}}" alt="">
     </div>
-    <div class="panel-footer"><h3>Bulbizarre</h3></div>
+    <div class="panel-footer"><h3>{{pokemon.name}}</h3></div>
   </div>
 </div>
