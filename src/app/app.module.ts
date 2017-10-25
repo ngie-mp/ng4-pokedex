@@ -1,22 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+
+import { PokeapiService } from './services/pokeapi.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ErrorpageComponent } from './components/errorpage/errorpage.component';
+import { HomeComponent } from './components/home/home.component';
+import { POKE_ROUTING } from './app.routes';
+import { PokeListComponent } from './components/poke-list/poke-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ErrorpageComponent,
+    HomeComponent,
+    PokeListComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    POKE_ROUTING
   ],
-  providers: [],
+  providers: [PokeapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
