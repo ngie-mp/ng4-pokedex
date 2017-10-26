@@ -4,7 +4,8 @@
 <div class="row">
   <div *ngIf="pokemonsList != null">
     <div class="panel panel-default col-md-2" *ngFor="let pokemon of pokemonsList.results">
-      <a href="{{pokemon.url}}">{{pokemon.name}}</a>
+      <a [routerLink]="['/details', pokemon.name]">{{pokemon.name}}</a>
+      {{pokemon.url}}
       <div *ngIf="pokemonsList.sprites">
       {{pokemon.sprites.front_default}}
     </div>

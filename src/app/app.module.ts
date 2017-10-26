@@ -11,6 +11,7 @@ import { PokeListComponent } from './components/poke-list/poke-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 import { HomeComponent } from './components/home/home.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 // Services
 import { PokeapiService } from './services/pokeapi.service';
@@ -21,7 +22,8 @@ import { PokeapiService } from './services/pokeapi.service';
     HeaderComponent,
     ErrorpageComponent,
     HomeComponent,
-    PokeListComponent
+    PokeListComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,
