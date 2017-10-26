@@ -2,10 +2,11 @@
   <h2>Pokemons</h2>
 </div>
 <div class="row">
-  <div class="panel panel-default col-md-2" *ngFor="let pokemon of pokemonsList">
-    <div class="panel-body">
-      <img src="../../assets/{{pokemon.image}}" alt="">
+  <div *ngIf="pokemonsList != null">
+    <div class="panel panel-default col-md-2" *ngFor="let pokemon of pokemonsList.results">
+      <a href="{{pokemon.url}}">{{pokemon.name}}</a>
+      <div *ngIf="pokemonsList.sprites">
+      {{pokemon.sprites.front_default}}
     </div>
-    <div class="panel-footer"><h3>{{pokemon.name}}</h3></div>
   </div>
 </div>
